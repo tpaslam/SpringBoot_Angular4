@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+  <div class="todo-header col-md-12">
+    TO DO LIST
+  </div>
+<div class="container margin-t-10" *ngFor="let todo of todoList; let i=index">
+  <div class="row todo-div">
+    <div class="col-md-9">
+      <input type="text" class="form-control todo-input disabled" [ngClass]="todo.status==1 ? 'line-through' : ''" id="name" [(ngModel)]="todo.todotext" [attr.disabled]="disableRowNum == i ? null:''">
+    </div>
+    <div class="col-md-3 padding-l-80">
+      <button type="button" class="btn btn-light todo-action-edit" (click)="editOrUpdate(i,todo)">{{disableRowNum == i ? 'Update':'Edit'}}</button>
+      <button type="button" class="btn btn-light todo-action-button" (click)="deleteRecord(todo)"> ❌ </button>
+      <button type="button" class="btn btn-light todo-action-button" (click)="toDoDone(todo)" *ngIf="todo.status==0">&#10004;</button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-5"></div>
+  <div class="col-md-1 todo-add-button"><button type="button" class="btn btn-primary" (click)="addRecord()" *ngIf="disableRowNum==-1">Add</button></div>
+</div>
+<div class="row"><div class="col-md-12" style="text-align:center;font-size: 10px;margin-top: 200px;">Its a POC and the time frame was pretty less. So I didnt follow any UX concepts</div></div>
+<router-outlet></router-outlet>

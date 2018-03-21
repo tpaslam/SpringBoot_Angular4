@@ -1,0 +1,38 @@
+.todo-header {
+  font-size: 20px;
+  color: #5e4682;
+  font-weight: bolder;
+  margin-top: 20px;
+  text-align:center
+}
+.todo-div {
+  border: 2px solid #563d7c;
+  border-radius: 2px;
+  //background-color: #282c34;
+  color: white;
+  min-height: 50px;
+  padding-top: 10px;
+}
+.todo-action-button {
+  padding: 0px;
+  margin-left: 5px;
+}
+.todo-action-edit {
+  padding: 0px 5px 0px 5px;
+}
+.padding-l-80 {
+  padding-left: 80px;
+}
+.margin-t-10 {
+  margin-top: 10px;
+}
+.todo-input{
+  padding: 0px 0px 0px 10px;
+}
+.todo-add-button{
+  margin-top: 10px;
+  margin-left: 30px;
+}
+.line-through{
+  text-decoration: line-through;
+}
