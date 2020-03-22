@@ -18,8 +18,7 @@ public class ToDoController {
     private ToDoService toDoService;
 
     @RequestMapping(value = "/fetchall", method = RequestMethod.GET)
-    public List<ToDo> getToDoList(){
-		
+    public List<ToDo> getToDoList(){		
         return toDoService.fetchAll();
     }
 
